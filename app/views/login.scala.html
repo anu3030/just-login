@@ -1,0 +1,9 @@
+
+@(userForm: Form[User])(implicit messages: Messages)
+@import helper._
+
+@helper.form(routes.Application.userLogin){
+@views.html.helper.inputText(userForm("email"))
+@views.html.helper.inputText(userForm("password"))
+<input type="submit" value="Submit">
+}
